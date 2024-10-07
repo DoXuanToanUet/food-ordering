@@ -21,8 +21,8 @@ const CartPage = () => {
                 {cartProducts?.length === 0 && (
                     <div>No products in your shopping </div>
                 )}
-                {cartProducts?.length > 0 && cartProducts.map( (product,index) =>(
-                    <div className='flex items-center gap-4 border-b py-2' key={index}>
+                {cartProducts?.length > 0 && cartProducts.map( (product) =>(
+                    <div className='flex items-center gap-4 border-b py-2' key={product._id}>
                         <div>
                             <Image src={'/pizza.png'} width={100} height={100}/>
                         </div>
