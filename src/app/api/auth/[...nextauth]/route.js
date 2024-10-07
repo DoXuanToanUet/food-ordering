@@ -9,7 +9,7 @@ import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "../../../../libs/mongoConnect";
 import { getServerSession } from "next-auth"
 
-export const authOptions = {
+ const authOptions = {
   secret: process.env.SECRET,
   adapter: MongoDBAdapter(clientPromise),
   providers: [
