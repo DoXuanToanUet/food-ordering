@@ -97,7 +97,8 @@ const ProfilePage = () => {
   return (
     <section>
         <div className='m-6'>
-            <UserTabs isAdmin={isAdmin}></UserTabs>
+            {/* <UserTabs isAdmin={isAdmin}></UserTabs> */}
+            <UserTabs isAdmin={true}></UserTabs>
         </div>
         
         <h1 className='text-center text-primary text-4xl'> Profile</h1>

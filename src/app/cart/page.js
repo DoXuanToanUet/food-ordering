@@ -37,8 +37,8 @@ const CartPage = () => {
                                 product.extras?.length > 0 &&(
                                     <div className='text-sm text-gray-500'>
                                         <b >Extras</b>{
-                                            product.extras.map( extra =>(
-                                                <div>- {extra.name} ${extra.price}</div>
+                                            product.extras.map( (extra,index) =>(
+                                                <div key={index}>- {extra.name} ${extra.price}</div>
                                             ))
                                         }
                                     </div>
