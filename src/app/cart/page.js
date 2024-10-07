@@ -21,7 +21,7 @@ const CartPage = () => {
                 {cartProducts?.length === 0 && (
                     <div>No products in your shopping </div>
                 )}
-                {cartProducts?.length > 0 && cartProducts.map( (product) =>(
+                {cartProducts?.length > 0 && cartProducts.map( (product,index) =>(
                     <div className='flex items-center gap-4 border-b py-2' key={product._id}>
                         <div>
                             <Image src={'/pizza.png'} width={100} height={100}/>
@@ -37,8 +37,8 @@ const CartPage = () => {
                                 product.extras?.length > 0 &&(
                                     <div className='text-sm text-gray-500'>
                                         <b >Extras</b>{
-                                            product.extras.map( (extra,index) =>(
-                                                <div key={index}>- {extra.name} ${extra.price}</div>
+                                            product.extras.map( (extra) =>(
+                                                <div key={extra._id}>- {extra.name} ${extra.price}</div>
                                             ))
                                         }
                                     </div>
