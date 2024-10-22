@@ -26,10 +26,10 @@ body {
   }
 }
 
-section.hero{
+/* section.hero{
   @apply grid;
   grid-template-columns: 4fr 6fr;
-}
+} */
 label{
   @apply text-gray-500
 }
@@ -72,4 +72,13 @@ a{
 }
 body {
   padding-top: 60px; /* Để tránh nội dung bị che bởi header */
+}
+.menu-items .active{
+  @apply text-primary font-bold 
+}
+.translate-x-full {
+  transform: translateX(100%);
+}
+.translate-x-0 {
+  transform: translateX(0);
 }

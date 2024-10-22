@@ -9,8 +9,9 @@ const HomeMenu = () => {
         const fetchMenuItems = async () => {
             const res = await fetch('/api/menuitems');
             const data = await res.json();
-            setBestSeller(data.slice(-3));
-            console.log(data.slice(-3), 'this is data home menu');
+            setBestSeller(data);
+            // setBestSeller(data.slice(-3));
+            // console.log(data.slice(-3), 'this is data home menu');
         };
     
         fetchMenuItems();
@@ -31,7 +32,7 @@ const HomeMenu = () => {
             <h2 className='text-primary font-bold text-4xl'>Menu</h2>
         </div>
 
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid grid-cols-2 xl:grid-cols-3 gap-4'>
             {bestSeller?.length >0 && bestSeller.map( item =>(
                 <MenuItem key={item._id} {...item}/>
             ))}

@@ -12,7 +12,7 @@ const MenuItemPriceProps = ({props, setProps,name,addLabel}) => {
         setProps( oldSizes =>{
             return [...oldSizes, {name: '',price:0}]
         })
-        // console.log(sizes,'this is size arr')
+        
     }
     function editSize(ev, index, prop ){
         const newValue = ev.target.value

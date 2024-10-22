@@ -51,7 +51,7 @@ const MenuItem = (menuItem) => {
         selectedPrice+= parseFloat(extra.price)
        }
     }
-  console.log('select price', selectedPrice)
+  // console.log('select price', selectedPrice)
 
 
   return (

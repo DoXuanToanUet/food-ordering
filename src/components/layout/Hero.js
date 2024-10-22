@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Hero = () => {
   return (
     <>
-        <section className='hero'>
+        <section className='hero grid grid-cols-1 xl:grid-cols-2 gap-4'>
             <div>
                 <h1 className='text-4xl font-semibold'>Everything is better on thiss</h1>
                 <p className="my-6 text-gray-500 text-sm">
@@ -22,8 +22,8 @@ const Hero = () => {
                 </div>
             </div>
            
-            <div className="relative hidden md:block">
-                <Image src={'/banner.png'} layout={'fill'} objectFit={'contain'} alt={'pizza'} />
+            <div className="relative hidden xl:block">
+                <Image src={'/logo.jpg'} layout={'fill'} objectFit={'contain'} alt={'pizza'} />
             </div>
         </section>
     </>
