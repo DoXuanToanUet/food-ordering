@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const CartProduct = ({product,removecartProduct,cartProductPrice,productIndex}) => {
   return (
-    <div key={`${product._id}-${productIndex}`}> 
+    <div > 
         <div className='flex items-center gap-4 border-b py-2' >
             <div>
                 <Image src={'/pizza.png'} width={100} height={100} alt=""/>

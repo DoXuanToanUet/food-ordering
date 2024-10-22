@@ -78,7 +78,7 @@ const CartPage = () => {
                     <div>No products in your shopping </div>
                 )}
                 {cartProducts?.length > 0 && cartProducts.map( (product,index) =>(
-                    <CartProduct product={product} removecartProduct={removecartProduct}  cartProductPrice={cartProductPrice} productIndex={index} />
+                    <CartProduct   key={`${product._id}-${index}`} product={product} removecartProduct={removecartProduct}  cartProductPrice={cartProductPrice}  />
                 ))}
                 <div className='text-xl p-4 text-right'>Total:  ${subtotal}</div>
             </div>
