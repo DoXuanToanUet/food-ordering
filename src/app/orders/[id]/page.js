@@ -57,15 +57,23 @@ const ShowOrderPage = () => {
                 <div className='grid grid-cols-2'>
                     <div>
                         <div>Order details</div>
-                        {order.cartProducts.map( product =>{
-                            return <CartProduct product={product}/>
+                        {order.cartProducts?.map( (product,index) =>{
+                            return <CartProduct product={product}  key={index}/>
                         })}
                     </div>
                     
                     <div>
                         <div className='bg-gray-100 p-4 rounded-lg'>
                             {/* Render order details here */}
-                            <AddressInput disabled={true} addressProps={...order} />
+                            <AddressInput disabled={true} 
+                                addressProps={{
+                                    phone: order.phone,
+                                    streetAddress: order.streetAddress,
+                                    postalCode: order.postalCode,
+                                    city: order.city,
+                                    country: order.country,
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
